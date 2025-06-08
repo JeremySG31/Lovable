@@ -21,14 +21,17 @@ const Navbar = () => {
             <Link to="/" className="text-foreground hover:text-accent font-medium">
               Inicio
             </Link>
+            <Link to="/peliculas" className="text-foreground hover:text-accent font-medium">
+              Películas
+            </Link>
+            <Link to="/series" className="text-foreground hover:text-accent font-medium">
+              Series
+            </Link>
             <Link to="/juegos" className="text-foreground hover:text-accent font-medium">
-              Juegos
+              Videojuegos
             </Link>
-            <Link to="/reseñas" className="text-foreground hover:text-accent font-medium">
-              Reseñas
-            </Link>
-            <Link to="/ofertas" className="text-foreground hover:text-accent font-medium">
-              Ofertas
+            <Link to="/libros" className="text-foreground hover:text-accent font-medium">
+              Libros
             </Link>
             <Link to="/top" className="text-foreground hover:text-accent font-medium">
               Top 10
@@ -68,14 +71,17 @@ const Navbar = () => {
             <Link to="/" className="text-foreground hover:text-accent py-2 font-medium">
               Inicio
             </Link>
+            <Link to="/peliculas" className="text-foreground hover:text-accent py-2 font-medium">
+              Películas
+            </Link>
+            <Link to="/series" className="text-foreground hover:text-accent py-2 font-medium">
+              Series
+            </Link>
             <Link to="/juegos" className="text-foreground hover:text-accent py-2 font-medium">
-              Juegos
+              Videojuegos
             </Link>
-            <Link to="/reseñas" className="text-foreground hover:text-accent py-2 font-medium">
-              Reseñas
-            </Link>
-            <Link to="/ofertas" className="text-foreground hover:text-accent py-2 font-medium">
-              Ofertas
+            <Link to="/libros" className="text-foreground hover:text-accent py-2 font-medium">
+              Libros
             </Link>
             <Link to="/top" className="text-foreground hover:text-accent py-2 font-medium">
               Top 10
