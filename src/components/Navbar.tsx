@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from "@/components/ui/button";
-import { Search } from "lucide-react";
+import { Search, Star } from "lucide-react";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -12,7 +12,8 @@ const Navbar = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between">
           <Link to="/" className="flex items-center space-x-2">
-            <span className="text-2xl font-bold text-primary">Cine<span className="text-accent">Crítica</span></span>
+            <Star className="h-8 w-8 text-accent fill-current" />
+            <span className="text-2xl font-bold text-primary">Review<span className="text-accent">Star</span></span>
           </Link>
           
           {/* Desktop Navigation */}
@@ -20,11 +21,14 @@ const Navbar = () => {
             <Link to="/" className="text-foreground hover:text-accent font-medium">
               Inicio
             </Link>
-            <Link to="/peliculas" className="text-foreground hover:text-accent font-medium">
-              Películas
+            <Link to="/juegos" className="text-foreground hover:text-accent font-medium">
+              Juegos
             </Link>
             <Link to="/reseñas" className="text-foreground hover:text-accent font-medium">
               Reseñas
+            </Link>
+            <Link to="/ofertas" className="text-foreground hover:text-accent font-medium">
+              Ofertas
             </Link>
             <Link to="/top" className="text-foreground hover:text-accent font-medium">
               Top 10
@@ -64,11 +68,14 @@ const Navbar = () => {
             <Link to="/" className="text-foreground hover:text-accent py-2 font-medium">
               Inicio
             </Link>
-            <Link to="/peliculas" className="text-foreground hover:text-accent py-2 font-medium">
-              Películas
+            <Link to="/juegos" className="text-foreground hover:text-accent py-2 font-medium">
+              Juegos
             </Link>
             <Link to="/reseñas" className="text-foreground hover:text-accent py-2 font-medium">
               Reseñas
+            </Link>
+            <Link to="/ofertas" className="text-foreground hover:text-accent py-2 font-medium">
+              Ofertas
             </Link>
             <Link to="/top" className="text-foreground hover:text-accent py-2 font-medium">
               Top 10

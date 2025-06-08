@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Star } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -8,12 +9,15 @@ const Footer = () => {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
-            <h3 className="text-xl font-bold mb-4">
-              <span className="text-primary">Cine</span>
-              <span className="text-accent">Crítica</span>
-            </h3>
+            <div className="flex items-center space-x-2 mb-4">
+              <Star className="h-6 w-6 text-accent fill-current" />
+              <h3 className="text-xl font-bold">
+                <span className="text-primary">Review</span>
+                <span className="text-accent">Star</span>
+              </h3>
+            </div>
             <p className="text-foreground/70">
-              Tu fuente confiable de reseñas de películas, noticias del cine y más.
+              Tu plataforma confiable de reseñas de videojuegos, noticias gaming y ofertas.
             </p>
           </div>
           
@@ -26,8 +30,8 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/peliculas" className="text-foreground/70 hover:text-accent transition-colors">
-                  Películas
+                <Link to="/juegos" className="text-foreground/70 hover:text-accent transition-colors">
+                  Juegos
                 </Link>
               </li>
               <li>
@@ -36,8 +40,8 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/top" className="text-foreground/70 hover:text-accent transition-colors">
-                  Top 10
+                <Link to="/ofertas" className="text-foreground/70 hover:text-accent transition-colors">
+                  Ofertas
                 </Link>
               </li>
             </ul>
@@ -52,26 +56,31 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/genero/drama" className="text-foreground/70 hover:text-accent transition-colors">
-                  Drama
+                <Link to="/genero/rpg" className="text-foreground/70 hover:text-accent transition-colors">
+                  RPG
                 </Link>
               </li>
               <li>
-                <Link to="/genero/comedia" className="text-foreground/70 hover:text-accent transition-colors">
-                  Comedia
+                <Link to="/genero/estrategia" className="text-foreground/70 hover:text-accent transition-colors">
+                  Estrategia
                 </Link>
               </li>
               <li>
-                <Link to="/genero/ciencia-ficcion" className="text-foreground/70 hover:text-accent transition-colors">
-                  Ciencia Ficción
+                <Link to="/genero/indie" className="text-foreground/70 hover:text-accent transition-colors">
+                  Indie
                 </Link>
               </li>
             </ul>
           </div>
           
           <div>
-            <h4 className="text-lg font-semibold mb-4">Legal</h4>
+            <h4 className="text-lg font-semibold mb-4">Soporte</h4>
             <ul className="space-y-2">
+              <li>
+                <Link to="/ayuda" className="text-foreground/70 hover:text-accent transition-colors">
+                  Centro de Ayuda
+                </Link>
+              </li>
               <li>
                 <Link to="/terminos" className="text-foreground/70 hover:text-accent transition-colors">
                   Términos de Uso
@@ -93,7 +102,7 @@ const Footer = () => {
         
         <div className="border-t border-border/30 mt-8 pt-6">
           <p className="text-center text-foreground/50 text-sm">
-            © {new Date().getFullYear()} CineCrítica. Todos los derechos reservados.
+            © {new Date().getFullYear()} ReviewStar. Todos los derechos reservados.
           </p>
         </div>
       </div>
