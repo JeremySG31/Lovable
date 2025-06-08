@@ -2,24 +2,12 @@
 import React from 'react';
 import Navbar from '../components/Navbar';
 import GameCard from '../components/GameCard';
-import FeaturedMovie from '../components/FeaturedMovie';
 import ReviewSection from '../components/ReviewSection';
 import Footer from '../components/Footer';
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 const Index = () => {
-  // Featured content data
-  const featuredContent = {
-    title: "Baldur's Gate 3",
-    imageUrl: "https://images.unsplash.com/photo-1542751371-adc38448a05e?w=500&h=750&fit=crop",
-    backdropUrl: "https://images.unsplash.com/photo-1542751371-adc38448a05e?w=1920&h=1080&fit=crop",
-    rating: 9.6,
-    year: 2023,
-    description: "Una obra maestra del RPG que redefine lo que significa la libertad de elección en los videojuegos. Con una narrativa profunda y mecánicas innovadoras.",
-    genres: ["RPG", "Aventura", "Estrategia"]
-  };
-
   // Recent content data (mixed categories)
   const recentContent = [
     {
@@ -42,10 +30,10 @@ const Index = () => {
     },
     {
       id: 3,
-      title: "The Witcher 3",
+      title: "Baldur's Gate 3",
       imageUrl: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=600&fit=crop",
-      rating: 9.3,
-      year: 2015,
+      rating: 9.6,
+      year: 2023,
       genres: ["RPG", "Aventura"],
       category: "Videojuego"
     },
@@ -57,36 +45,33 @@ const Index = () => {
       year: 1965,
       genres: ["Sci-Fi", "Clásico"],
       category: "Libro"
-    }
-  ];
-
-  const popularContent = [
+    },
     {
       id: 5,
-      title: "Oppenheimer",
+      title: "The Witcher 3",
       imageUrl: "https://images.unsplash.com/photo-1542751371-adc38448a05e?w=400&h=600&fit=crop",
-      rating: 8.7,
-      year: 2023,
-      genres: ["Drama", "Biográfico"],
-      category: "Película"
+      rating: 9.3,
+      year: 2015,
+      genres: ["RPG", "Aventura"],
+      category: "Videojuego"
     },
     {
       id: 6,
-      title: "Wednesday",
+      title: "House of the Dragon",
       imageUrl: "https://images.unsplash.com/photo-1511512578047-dfb367046420?w=400&h=600&fit=crop",
-      rating: 8.1,
+      rating: 8.5,
       year: 2022,
-      genres: ["Misterio", "Comedia"],
+      genres: ["Fantasía", "Drama"],
       category: "Serie"
     },
     {
       id: 7,
-      title: "Hogwarts Legacy",
+      title: "Oppenheimer",
       imageUrl: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=600&fit=crop",
-      rating: 8.4,
+      rating: 8.7,
       year: 2023,
-      genres: ["RPG", "Aventura"],
-      category: "Videojuego"
+      genres: ["Drama", "Biográfico"],
+      category: "Película"
     },
     {
       id: 8,
@@ -99,7 +84,82 @@ const Index = () => {
     }
   ];
 
-  // Sample reviews
+  const popularContent = [
+    {
+      id: 9,
+      title: "Wednesday",
+      imageUrl: "https://images.unsplash.com/photo-1511512578047-dfb367046420?w=400&h=600&fit=crop",
+      rating: 8.1,
+      year: 2022,
+      genres: ["Misterio", "Comedia"],
+      category: "Serie"
+    },
+    {
+      id: 10,
+      title: "Avatar: El Camino del Agua",
+      imageUrl: "https://images.unsplash.com/photo-1542751371-adc38448a05e?w=400&h=600&fit=crop",
+      rating: 8.3,
+      year: 2022,
+      genres: ["Sci-Fi", "Aventura"],
+      category: "Película"
+    },
+    {
+      id: 11,
+      title: "Hogwarts Legacy",
+      imageUrl: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=600&fit=crop",
+      rating: 8.4,
+      year: 2023,
+      genres: ["RPG", "Aventura"],
+      category: "Videojuego"
+    },
+    {
+      id: 12,
+      title: "It Ends with Us",
+      imageUrl: "https://images.unsplash.com/photo-1538481199705-c710c4e965fc?w=400&h=600&fit=crop",
+      rating: 8.2,
+      year: 2016,
+      genres: ["Romance", "Drama"],
+      category: "Libro"
+    },
+    {
+      id: 13,
+      title: "The Bear",
+      imageUrl: "https://images.unsplash.com/photo-1511512578047-dfb367046420?w=400&h=600&fit=crop",
+      rating: 9.1,
+      year: 2022,
+      genres: ["Comedia", "Drama"],
+      category: "Serie"
+    },
+    {
+      id: 14,
+      title: "Everything Everywhere All at Once",
+      imageUrl: "https://images.unsplash.com/photo-1542751371-adc38448a05e?w=400&h=600&fit=crop",
+      rating: 8.9,
+      year: 2022,
+      genres: ["Sci-Fi", "Comedia"],
+      category: "Película"
+    },
+    {
+      id: 15,
+      title: "Elden Ring",
+      imageUrl: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=600&fit=crop",
+      rating: 9.4,
+      year: 2022,
+      genres: ["RPG", "Acción"],
+      category: "Videojuego"
+    },
+    {
+      id: 16,
+      title: "The Seven Husbands of Evelyn Hugo",
+      imageUrl: "https://images.unsplash.com/photo-1538481199705-c710c4e965fc?w=400&h=600&fit=crop",
+      rating: 8.8,
+      year: 2017,
+      genres: ["Drama", "Romance"],
+      category: "Libro"
+    }
+  ];
+
+  // Sample reviews from mixed categories
   const reviews = [
     {
       id: 1,
@@ -113,30 +173,45 @@ const Index = () => {
     },
     {
       id: 2,
-      authorName: "ReviewMaster_ES",
-      authorAvatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=ReviewMaster",
+      authorName: "SerieAdicto",
+      authorAvatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=SerieAdicto",
       rating: 9,
-      content: "Después de 150+ horas puedo confirmar que este juego es una obra de arte. La profundidad de los personajes y la calidad del diálogo son excepcionales.",
-      date: "3 dic 2023",
+      content: "The Last of Us logra una adaptación perfecta del videojuego. Pedro Pascal y Bella Ramsey tienen una química increíble, y la producción es de primer nivel.",
+      date: "8 dic 2023",
       likes: 89,
       dislikes: 12
     },
+    {
+      id: 3,
+      authorName: "CineRetro",
+      authorAvatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=CineRetro",
+      rating: 9,
+      content: "Dune: Parte Dos supera todas las expectativas. Denis Villeneuve consigue crear una secuela épica que honra el material original con una cinematografía espectacular.",
+      date: "2 dic 2023",
+      likes: 156,
+      dislikes: 7
+    }
   ];
 
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
       
-      {/* Featured Content */}
-      <FeaturedMovie
-        title={featuredContent.title}
-        imageUrl={featuredContent.imageUrl}
-        backdropUrl={featuredContent.backdropUrl}
-        rating={featuredContent.rating}
-        year={featuredContent.year}
-        description={featuredContent.description}
-        genres={featuredContent.genres}
-      />
+      {/* Hero Section */}
+      <section className="bg-gradient-to-r from-primary/10 to-accent/10 py-16">
+        <div className="container mx-auto px-4 text-center">
+          <h1 className="text-4xl md:text-6xl font-bold mb-4">
+            Bienvenido a <span className="text-accent">ReviewStar</span>
+          </h1>
+          <p className="text-xl text-foreground/70 mb-8 max-w-2xl mx-auto">
+            Descubre las mejores reseñas de películas, series, videojuegos, libros y más. 
+            Tu plataforma de confianza para encontrar tu próxima gran experiencia.
+          </p>
+          <Button size="lg" className="text-lg px-8 py-3">
+            Explorar Reseñas
+          </Button>
+        </div>
+      </section>
       
       {/* Content Section */}
       <section className="py-12">
@@ -193,7 +268,7 @@ const Index = () => {
       
       {/* Reviews Section */}
       <ReviewSection 
-        title="Reseñas Destacadas de Baldur's Gate 3"
+        title="Reseñas Destacadas de la Comunidad"
         reviews={reviews}
       />
       
